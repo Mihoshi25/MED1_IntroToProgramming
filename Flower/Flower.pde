@@ -1,21 +1,15 @@
-int r=60;
-float ballX;
-float ballY;
+FlowerClass f1;
 
-void setup() {
-  size(600,400);
+void setup() 
+{
+  size(1000, 700);
   background(#43AF76);
+  f1 = new FlowerClass(6, 90, #FFA000, #C80000, width/2, height/2, 5, 5);
 }
 
-void draw(){
-
-  fill(#FFA005);
-  for (float i=0;i<PI*2;i+=2*PI/5) {
-  ballX=width/2 + r*cos(i);
-  ballY=height/2 + r*sin(i);
-  ellipse(ballX,ballY,r,r); 
-  }
-  fill(200,0,0);
-  ellipse(width/2,height/2,r*1.2,r*1.2);
-}  
- 
+void draw() 
+{
+  background(#43AF76);
+  f1.moveFlower();
+  f1.drawFlower();
+}
