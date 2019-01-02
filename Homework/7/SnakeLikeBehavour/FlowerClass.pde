@@ -8,11 +8,9 @@ class FlowerClass
   int colorPetal;
   int posX;
   int posY;
-  int moveX;
-  int moveY;
 
   // Constructor
-  FlowerClass(int numPetal, int radius, int colorCenter, int colorPetal, int posX, int posY, int moveX, int moveY)
+  FlowerClass(int numPetal, int radius, int colorCenter, int colorPetal, int posX, int posY)
   {
     this.numPetal = numPetal;
     this.radius = radius;
@@ -20,8 +18,6 @@ class FlowerClass
     this.colorPetal = colorPetal;
     this.posX = posX;
     this.posY = posY;
-    this.moveX = moveX;
-    this.moveY = moveY;
   }
 
   // Methods
@@ -38,19 +34,5 @@ class FlowerClass
     }
     fill(colorCenter);
     ellipse(posX, posY, radius * 1.2, radius * 1.2);
-  }
-
-  void moveFlower()
-  {
-    if ((posX - radius * 1.5 <= 0) || (posX + radius * 1.5 >= width))
-    {
-      moveX = -moveX;
-    }
-    if ((posY - radius * 1.5 <= 0) || (posY + radius * 1.5 >= height))
-    {
-      moveY = -moveY;
-    }
-    posX = posX + moveX;
-    posY = posY + moveY;
   }
 }
