@@ -1,5 +1,5 @@
 // A polar coordinate
-float r = 75;
+float r = 0.0;
 float theta = 0.0;
 float circleSize = 0.0;
 float blue = 0.0;
@@ -27,8 +27,8 @@ void draw()
   ellipse(x + width/2, y + height/2, s, s);
 
   // Increment the angle
-  theta += 180;
+  theta += 0.01;
 
   // Increment the spiral
-  //r += 0.05;
+  r += 0.05;
 }
